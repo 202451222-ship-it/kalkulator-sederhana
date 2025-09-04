@@ -1,0 +1,85 @@
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+}
+
+/* Style untuk layar output */
+#output {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 15px;
+    padding: 20px 10px;
+}
+
+#expression {
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+#result {
+    font-size: 50px;
+    font-weight: 300;
+}
+
+/* Style untuk container tombol */
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Membuat 4 kolom dengan lebar yang sama */
+    gap: 10px; /* Jarak antar tombol */
+    padding: 10px;
+}
+
+/* Style dasar untuk semua tombol */
+button {
+    height: 80px; /* Atur tinggi semua tombol */
+    font-size: 24px;
+    font-weight: 400;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-light {
+    background-color: gold;
+    color: black;
+}
+
+.btn-dark {
+    background-color: gray;
+    color: white;
+}
+
+.btn-blue {
+    background-color: skyblue;
+    color: black;
+}
+
+.btn-red {
+    background-color: gray;
+    color: white;
+}
+
+/* Efek hover untuk tombol*/
+.btn-light:hover {
+    background-color: rgb(184, 134, 11);
+}
+
+.btn-dark:hover {
+    background-color: lime;
+}
+
+.btn-blue:hover {
+    background-color: rgb(0, 0, 128);
+}
+
+.btn-red:hover {
+    background-color: lime;
+}
+
