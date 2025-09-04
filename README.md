@@ -1,2 +1,2 @@
-# kalkulator-sederhana
+#  Arcanum Calculation
 Project tittle  = Arcanum Calculation
