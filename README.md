@@ -73,6 +73,31 @@ o	submit: Menghitung hasil dari ekspresi menggunakan fungsi eval(), yang memungk
                             File ini berisi logika fungsional, yang mencakup:
                           •	Pengaksesan DOM: Menggunakan document.querySelector() untuk mendapatkan referensi ke elemen HTML berdasarkan ID-nya (#buttons, #expression, #result).
                           •	Variabel Status: Mengatur variabel expression, result, dan isResultDisplayed untuk mengelola status kalkulator.
+                          •	Penanganan Event: Menambahkan event listener pada kontainer tombol (buttonsBox) untuk mendeteksi setiap klik tombol.
+                          •	Logika Aksi: Menggunakan switch statement untuk menjalankan fungsi yang berbeda-beda berdasarkan nilai data-action dari tombol yang diklik. Logika ini mencakup:
+                          o	clear: Mengosongkan expression dan result.
+                          o	backspace: Menghapus karakter terakhir dari string expression.
+                          o	negate: Mengubah tanda angka (menambahkan atau menghapus -).
+                          o	number: Menambahkan angka ke expression.
+                          o	decimal: Menambahkan titik desimal, dengan validasi untuk mencegah duplikasi.
+                          o	addition, subtraction, dll.: Menambahkan operator ke ekspresi, dengan validasi agar tidak ada operator ganda.
+                          o	submit: Menghitung ekspresi dengan eval().
+                          •	Pembaruan Tampilan: Selalu memperbarui textContent dari elemen expressionDiv dan resultDiv untuk mencerminkan status terkini.
+
+                          
+**AI support explanation**  = **AI Support: IBM GRANITE**
+**1. Analisis dan Pengujian Otomatis dengan AI**
+Model AI IBM GRANITE dapat dimanfaatkan untuk menganalisis dan menguji kode kalkulator secara otomatis. Model ini mampu memproses file script.js untuk mengidentifikasi potensi bug, kesalahan logika, atau kerentanan keamanan yang mungkin tidak terdeteksi oleh pengujian manual. Misalnya, AI dapat menemukan kasus di mana eval() mungkin rentan terhadap input berbahaya, atau di mana logika penambahan titik desimal (decimal) tidak berfungsi dengan benar pada skenario tertentu.
+•	Dampak Nyata: Dengan menggunakan AI, proses debugging dan pengujian dapat dipercepat hingga 60%. Ini menghemat waktu pengembangan, mengurangi biaya, dan memastikan aplikasi memiliki kualitas yang lebih tinggi sebelum diluncurkan.
+**2. Optimasi Kode dan Peningkatan Performa**
+IBM GRANITE dapat mengoptimalkan kode JavaScript (script.js) untuk meningkatkan performa. AI bisa menyarankan cara untuk membuat kode lebih efisien, seperti mengganti beberapa blok if/else atau switch yang rumit dengan logika yang lebih sederhana. Selain itu, model ini dapat mengidentifikasi bagian kode yang berulang dan menyarankan refactoring untuk mengurangi ukuran file dan mempercepat waktu eksekusi.
+•	Dampak Nyata: Optimasi kode yang disarankan oleh AI dapat mengurangi waktu pemrosesan dan meningkatkan responsivitas kalkulator. Hal ini menghasilkan pengalaman pengguna yang lebih lancar, terutama pada perangkat dengan spesifikasi rendah atau saat menjalankan perhitungan yang kompleks.
+**3. Pembuatan Dokumentasi dan Fitur Baru Berbasis AI**
+AI IBM GRANITE dapat membantu dalam pembuatan dokumentasi teknis dari kode yang ada. Model ini dapat secara otomatis menghasilkan deskripsi fungsi, parameter, dan contoh penggunaan berdasarkan kode di script.js. Selain itu, AI juga dapat menyarankan fitur-fitur baru yang relevan, seperti penambahan fungsi memori atau konversi mata uang, berdasarkan analisis pola penggunaan kalkulator secara global.
+•	Dampak Nyata: Dukungan AI mempercepat proses dokumentasi dan memungkinkan pengembang untuk fokus pada inovasi. Dengan saran fitur berbasis AI, aplikasi dapat terus berkembang dan tetap relevan dengan kebutuhan pengguna, tanpa memerlukan riset pasar yang panjang dan manual.
+
+
+ 
 
 
 
