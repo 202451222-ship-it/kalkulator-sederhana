@@ -5,7 +5,7 @@
 Proyek ini adalah implementasi kalkulator sederhana yang dibangun menggunakan teknologi web dasar: HTML, CSS, dan JavaScript. Tujuannya adalah untuk membuat antarmuka kalkulator yang berfungsi penuh dan interaktif, mirip dengan kalkulator standar pada perangkat digital.
 Identifikasi dan Analisis File
 **index.html**
-Berkas ini adalah fondasi dari antarmuka pengguna (UI). Ia mendefinisikan struktur halaman web, termasuk:
+Berkas ini adalah fondasi dari antarmuka pengguna. Ia mendefinisikan struktur halaman web, termasuk:
 •	Header: Judul halaman "Kalkulator Sederhana" dan tautan ke berkas CSS (style.css).
 •	Bagian Output (<section id='output'>): Area tampilan untuk ekspresi matematika yang sedang diketik (<div id='expression'>) dan hasilnya (<div id='result'>).
 •	Bagian Tombol (<section id='buttons'>): Sebuah kontainer yang berisi semua tombol kalkulator, yang disusun menggunakan sistem grid. Setiap tombol memiliki:
@@ -32,52 +32,50 @@ o	operator: Menambahkan operator matematika (+, -, *, /) ke ekspresi, dengan val
 o	submit: Menghitung hasil dari ekspresi menggunakan fungsi eval(), yang memungkinkan evaluasi string sebagai kode JavaScript. Fungsi ini juga menyertakan penanganan kesalahan (try...catch) untuk ekspresi yang tidak valid.
 •	Pembaruan Tampilan: Setelah setiap aksi, skrip ini memperbarui konten elemen #expression dan #result di DOM agar sesuai dengan status internal kalkulator.
 
-**Technologies use**d  = Teknologi yang digunakan yaitu teknologi web HTML, CSS, dan JAVASCRIPT
+**Technologies used**  = Teknologi yang digunakan yaitu teknologi web HTML, CSS, dan JAVASCRIPT
 
 **Features**           =  Fitur-fitur yang dimiliki yaitu:
                           •	Operasi Dasar: Mampu melakukan operasi matematika dasar seperti penjumlahan (+), pengurangan (-), perkalian (*), dan pembagian (/).
                           •	Modulus: Terdapat tombol % yang digunakan untuk operasi modulus (sisa bagi).
-                          •	Tampilan Dinamis: Memiliki dua area tampilan: satu untuk menampilkan ekspresi yang sedang diketik (20*5), dan satu lagi untuk menampilkan hasilnya (100).
+                          •	Tampilan Dinamis: Memiliki dua area tampilan: satu untuk menampilkan ekspresi yang sedang diketik (20*5), dan satu lagi untuk menampilkan                                    hasilnya (100).
                           •	Tombol Fungsional: Dilengkapi dengan berbagai tombol khusus:
                           o	C (Clear): Untuk menghapus seluruh ekspresi dan mengulang perhitungan dari awal.
                           o	+/- (Negate): Untuk mengubah tanda angka dari positif menjadi negatif atau sebaliknya.
                           o	Backspace: Tombol dengan simbol &#x232B; untuk menghapus karakter terakhir dari ekspresi.
                           o (Desimal): Untuk menambahkan titik desimal pada angka.
-                          •	Penanganan Input: Mampu menangani input angka dan operator secara berurutan, dengan validasi untuk mencegah input operator ganda atau titik desimal yang tidak valid.
+                          •	Penanganan Input: Mampu menangani input angka dan operator secara berurutan, dengan validasi untuk mencegah input operator ganda atau titik                                  desimal yang tidak valid.
                           •	Tombol Submit: Tombol = untuk menghitung hasil dari ekspresi yang telah dimasukkan.
                           •	Penanganan Error: Menggunakan blok try...catch untuk menampilkan pesan 'Error' jika terjadi kesalahan dalam perhitungan ekspresi.
 
 **Setup instructions **   = **Pengaturan di index.html**
                           File ini mengatur struktur dasar halaman, termasuk:
-                          •	Tampilan (Output): Area tampilan untuk kalkulator diatur dalam sebuah <section> dengan id='output'. Di dalamnya, terdapat dua div untuk menampilkan ekspresi           
-                          (id='expression') dan hasil (id='result').
+                          •	Tampilan (Output): Area tampilan untuk kalkulator diatur dalam sebuah <section> dengan id='output'. Di dalamnya, terdapat dua div untuk                                      menampilkan ekspresi (id='expression') dan hasil (id='result').
                           •	Tombol (Buttons): Semua tombol kalkulator dikelompokkan dalam <section> dengan id='buttons'. Setiap tombol memiliki atribut:
                           o	class: Untuk menentukan gaya visual (misalnya, btn-light, btn-dark, btn-blue, btn-red).
                           o	data-action: Menjelaskan fungsi tombol, seperti 'clear', 'number', 'multiplication', atau 'submit'.
                           o	data-value: Memberikan nilai spesifik dari tombol, seperti '7', '-', atau '='.
-                          •	Koneksi File: Terdapat tautan ke file CSS (<link rel="stylesheet" ... href="style.css">) dan JavaScript (<script src="script.js"></script>) untuk mengatur tampilan dan
-                            fungsionalitas.
+                          •	Koneksi File: Terdapat tautan ke file CSS (<link rel="stylesheet" ... href="style.css">) dan JavaScript (<script src="script.js"></script>)                                  untuk mengatur tampilan dan fungsionalitas.
 
                             Pengaturan di style.css
                             File ini berfokus pada pengaturan visual dan tata letak, seperti:
-                          •	Tata Letak Halaman: Menggunakan flexbox untuk membuat bodi halaman berorientasi vertikal (flex-direction: column) dan mengatur posisi konten.
+                          •	Tata Letak Halaman: Menggunakan flexbox untuk membuat body halaman berorientasi vertikal (flex-direction: column) dan mengatur posisi konten.
                           •	Tata Letak Tombol: Menggunakan grid untuk menyusun tombol-tombol dalam 4 kolom (grid-template-columns: repeat(4, 1fr)).
                           •	Gaya Tombol: Mendefinisikan kelas CSS untuk berbagai jenis tombol dengan warna berbeda:
                           o	.btn-light: Emas (gold)
                           o	.btn-dark: Abu-abu (gray)
                           o	.btn-blue: Biru muda (skyblue)
                           o	.btn-red: Merah (gray), meskipun nama kelasnya 'red', warnanya diatur abu-abu.
-                          •	Efek Interaktif: Mengatur efek hover pada tombol agar warnanya berubah saat kursor diarahkan ke atasnya, memberikan umpan balik visual kepada pengguna.
+                          •	Efek Interaktif: Mengatur efek hover pada tombol agar warnanya berubah saat kursor diarahkan ke atasnya, memberikan umpan balik visual kepada                                pengguna.
 
-                             Pengaturan di script.js
+                            Pengaturan di script.js
                             File ini berisi logika fungsional, yang mencakup:
-                          •	Pengaksesan DOM: Menggunakan document.querySelector() untuk mendapatkan referensi ke elemen HTML berdasarkan ID-nya (#buttons, #expression, #result).
+                          •	Pengaksesan DOM: Menggunakan document.querySelector() untuk mendapatkan referensi ke elemen HTML berdasarkan ID-nya (#buttons, #expression,                                  #result).
                           •	Variabel Status: Mengatur variabel expression, result, dan isResultDisplayed untuk mengelola status kalkulator.
                           •	Penanganan Event: Menambahkan event listener pada kontainer tombol (buttonsBox) untuk mendeteksi setiap klik tombol.
-                          •	Logika Aksi: Menggunakan switch statement untuk menjalankan fungsi yang berbeda-beda berdasarkan nilai data-action dari tombol yang diklik. Logika ini mencakup:
+                          •	Logika Aksi: Menggunakan switch statement untuk menjalankan fungsi yang berbeda-beda berdasarkan nilai data-action dari tombol yang diklik.                                  Logika ini mencakup:
                           o	clear: Mengosongkan expression dan result.
                           o	backspace: Menghapus karakter terakhir dari string expression.
-                          o	negate: Mengubah tanda angka (menambahkan atau menghapus -).
+                          o	negate: Mengubah tanda angka (menambahkan atau menghapus).
                           o	number: Menambahkan angka ke expression.
                           o	decimal: Menambahkan titik desimal, dengan validasi untuk mencegah duplikasi.
                           o	addition, subtraction, dll.: Menambahkan operator ke ekspresi, dengan validasi agar tidak ada operator ganda.
@@ -85,7 +83,9 @@ o	submit: Menghitung hasil dari ekspresi menggunakan fungsi eval(), yang memungk
                           •	Pembaruan Tampilan: Selalu memperbarui textContent dari elemen expressionDiv dan resultDiv untuk mencerminkan status terkini.
 
                           
-**AI support explanation**  = **AI Support: IBM GRANITE**
+**AI support explanation**  
+
+= **AI Support: IBM GRANITE**
 **1. Analisis dan Pengujian Otomatis dengan AI**
 Model AI IBM GRANITE dapat dimanfaatkan untuk menganalisis dan menguji kode kalkulator secara otomatis. Model ini mampu memproses file script.js untuk mengidentifikasi potensi bug, kesalahan logika, atau kerentanan keamanan yang mungkin tidak terdeteksi oleh pengujian manual. Misalnya, AI dapat menemukan kasus di mana eval() mungkin rentan terhadap input berbahaya, atau di mana logika penambahan titik desimal (decimal) tidak berfungsi dengan benar pada skenario tertentu.
 •	Dampak Nyata: Dengan menggunakan AI, proses debugging dan pengujian dapat dipercepat hingga 60%. Ini menghemat waktu pengembangan, mengurangi biaya, dan memastikan aplikasi memiliki kualitas yang lebih tinggi sebelum diluncurkan.
